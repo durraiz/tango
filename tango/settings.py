@@ -64,6 +64,7 @@ DATABASES = {
 }
 
 # test comment testing 123 checking jiogs 
+#another line of commenting
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
