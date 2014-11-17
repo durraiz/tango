@@ -3,8 +3,9 @@ from django.contrib import admin
 
 urlpatterns = patterns('',
     # Examples:
-    # url(r'^$', 'tango.views.home', name='home'),
+    # url(r'^$', 'tango_with_django_project_17.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^rango/', include('rango.urls')), # Every individual application should have its own urls.py file so if that app exists on the page then the content is being pulled and not for every single page
 )

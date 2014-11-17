@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+TEMPLATE_PATH = os.path.join(BASE_DIR, 'templates')
 
 
 # Quick-start development settings - unsuitable for production
@@ -22,6 +23,10 @@ SECRET_KEY = 'lxzqfokf-2f^)40d=o3^&z&zr(0da(rm#g)k@n$3nw8y(x@62n'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+TEMPLATE_DIRS = [
+    # Relative path identified in the chain below
+    TEMPLATE_PATH,
+]
 TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
@@ -36,6 +41,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+	'rango',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -63,8 +69,7 @@ DATABASES = {
     }
 }
 
-# test comment testing 123 checking jiogs 
-#another line of commenting
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
